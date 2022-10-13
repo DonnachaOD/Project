@@ -52,4 +52,72 @@ public class Lecturer {
 		this.modulesTaught.addAll(modules);
 	}
 	
+
+	public Lecturer() {
+	}
+
+	public Lecturer(String name, int age, DateTime dateOfBirth, int id, String username, List<Module> modulesTaught) {
+		this.name = name;
+		this.age = age;
+		this.dateOfBirth = dateOfBirth;
+		this.id = id;
+		this.username = username;
+		this.modulesTaught = modulesTaught;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return this.age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public DateTime getDateOfBirth() {
+		return this.dateOfBirth;
+	}
+
+	public void setDateOfBirth(DateTime dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public List<Module> getModulesTaught() {
+		return this.modulesTaught;
+	}
+
+	public void setModulesTaught(List<Module> modulesTaught) {
+		this.modulesTaught = modulesTaught;
+	}
+
+	@Override
+	public String toString() {
+		return "{" +
+			" name='" + getName() + "'" +
+			", age='" + getAge() + "'" +
+			", dateOfBirth='" + getDateOfBirth() + "'" +
+			", id='" + getId() + "'" +
+			", username='" + getUsername() + "'" +
+			", modulesTaught='" + getModulesTaught() + "'" +
+			"}";
+	}
+
 }

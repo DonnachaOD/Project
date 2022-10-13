@@ -13,8 +13,8 @@ import org.joda.time.DateTime;
  */
 public class Course {
 	public String courseName;		//Name of Course
-	public List<Module> modules = new ArrayList<Module>();		//List of Modules in course
-	public List<Student> students = new ArrayList<Student>();	//List of Students taking this course
+	public ArrayList<Module> modules = new ArrayList<Module>();		//List of Modules in course
+	public ArrayList<Student> students = new ArrayList<Student>();	//List of Students taking this course
 	public DateTime startDate = new DateTime();					//Start Date of course
 	public DateTime endDate = new DateTime();					//End Date of course
 	
@@ -46,9 +46,59 @@ public class Course {
 	public void addStartDate(DateTime startDate) {
 		this.startDate = startDate;
 	}
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+	public void setModules(ArrayList<Module> modules) {
+		this.modules = modules;
+	}
+
+	public ArrayList<Student> getStudents() {
+		return this.students;
+	}
+
+	public void setStudents(ArrayList<Student> students) {
+		this.students = students;
+	}
+
+	public DateTime getStartDate() {
+		return this.startDate;
+	}
+
+	public void setStartDate(DateTime startDate) {
+		this.startDate = startDate;
+	}
+
+	public DateTime getEndDate() {
+		return this.endDate;
+	}
+
+	public void setEndDate(DateTime endDate) {
+		this.endDate = endDate;
+	}
 	
 	//Add End Date
 	public void addEndDate(DateTime endDate) {
 		this.endDate = endDate;
 	}
+
+	public ArrayList<Module> getModules(){
+		return modules;
+	}
+
+	public String getCourseName(){
+		return this.courseName;
+	}
+
+	@Override
+	public String toString() {
+		return "{" +
+			" courseName='" + getCourseName() + "'" +
+			", modules='" + getModules() + "'" +
+			", students='" + getStudents() + "'" +
+			", startDate='" + getStartDate() + "'" +
+			", endDate='" + getEndDate() + "'" +
+			"}";
+	}
+
 }

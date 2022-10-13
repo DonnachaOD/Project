@@ -57,10 +57,87 @@ public class Student {
 	//Add Course to list of courses
 	public void addCourse(Course course) {
 		this.courses.add(course);
+		
 	}
 	
 	//Overloaded Method add list of courses to list of courses
 	public void addCourse(ArrayList<Course> courses) {
 		this.courses.addAll(courses);
+		for(Course course : courses){
+			this.addModule(course.getModules());
+		}
 	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return this.age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public DateTime getDateOfBirth() {
+		return this.dateOfBirth;
+	}
+
+	public void setDateOfBirth(DateTime dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public List<Course> getCourses() {
+		return this.courses;
+	}
+
+	public void setCourses(List<Course> courses) {
+		this.courses = courses;
+	}
+
+	public List<Module> getModules() {
+		return this.modules;
+	}
+
+	public void setModules(List<Module> modules) {
+		this.modules = modules;
+	}
+
+	@Override
+	public String toString(){
+		int i = 1;
+		String output = "";
+		output += "Name: 			" + name;
+		output += "\nAge: 			" + age;
+		output += "\nDate of Birth: " + dateOfBirth;
+		output += "\nUsername:		" + username;
+		output += "\nID:			" + id;
+		output += "\nCourses:		\n---" + courses;
+		for(Course course : courses){
+			output += "\n	Course #" + i + ":		" + course.getCourseName();
+			output += "\n		Modules:";
+				for(Module module : course.getModules()){
+					output += "\n			" + module.getModuleName();
+				}
+			i++;
+		}
+		return output;
+	}
+			
 }

@@ -44,4 +44,67 @@ public class Module {
 	public void addCourse(ArrayList<Course> courses) {
 		courses.addAll(courses);
 	}
+
+	public String getModuleName() {
+		return this.moduleName;
+	}
+
+
+	public Module() {
+	}
+
+	public Module(String moduleName, String id, Lecturer lecturer, List<Student> students, List<Course> courses) {
+		this.moduleName = moduleName;
+		this.id = id;
+		this.lecturer = lecturer;
+		this.students = students;
+		this.courses = courses;
+	}
+	public void setModuleName(String moduleName) {
+		this.moduleName = moduleName;
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Lecturer getLecturer() {
+		return this.lecturer;
+	}
+
+	public void setLecturer(Lecturer lecturer) {
+		this.lecturer = lecturer;
+	}
+
+	public List<Student> getStudents() {
+		return this.students;
+	}
+
+	public void setStudents(List<Student> students) {
+		this.students = students;
+	}
+
+	public List<Course> getCourses() {
+		return this.courses;
+	}
+
+	public void setCourses(List<Course> courses) {
+		this.courses = courses;
+	}
+
+	@Override
+	public String toString() {
+		return "{" +
+			" moduleName='" + getModuleName() + "'" +
+			", id='" + getId() + "'" +
+			", lecturer='" + getLecturer() + "'" +
+			", students='" + getStudents() + "'" +
+			", courses='" + getCourses() + "'" +
+			"}";
+	}
+
 }
