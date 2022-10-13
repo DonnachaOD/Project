@@ -35,16 +35,14 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
     
-    //Simplementation 'com.github.DonnachaOD:CT417_Assignment1a:V1.0'
+    implementation 'com.github.DonnachaOD:SoftwareEngIIIA1a:v0.1'
     
     // https://mvnrepository.com/artifact/org.terasoluna.gfw/terasoluna-gfw-jodatime
 	implementation 'org.terasoluna.gfw:terasoluna-gfw-jodatime:5.7.1.RELEASE'
 }
 
-//allprojects {
-//    repositories {
-//        jcenter()
-//        mavenLocal()
-//        maven { url "https://www.jitpack.io" }
-//    }
-//}
+allprojects {
+    repositories {
+        maven { url "https://www.jitpack.io" }
+    }
+}
