@@ -10,17 +10,18 @@ plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
     id 'war'
+    id 'maven-publish'
 }
 
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    //jcenter()
     mavenCentral()
-    mavenLocal()
-    maven{
-    	url 'https://jitpack.io'
-   }
+    //mavenLocal()
+    //maven{
+    //	url 'https://jitpack.io'
+    //}
 }
 
 dependencies {
@@ -39,14 +40,16 @@ dependencies {
     //implementation 'com.github.DonnachaOD:SoftwareEngIIIA1a:v0.1'
 
     // Jitpack?
-    implementation 'com.github.jitpack:gradle-simple:1.0'
+    //implementation 'com.github.jitpack:gradle-simple:1.0'
     
     // https://mvnrepository.com/artifact/org.terasoluna.gfw/terasoluna-gfw-jodatime
 	implementation 'org.terasoluna.gfw:terasoluna-gfw-jodatime:5.7.1.RELEASE'
 }
 
-allprojects {
-    repositories {
-        maven { url "https://www.jitpack.io" }
-    }
-}
+//allprojects {
+//    repositories {
+//        maven { url "https://www.jitpack.io" }
+//    }
+//}
+
+
