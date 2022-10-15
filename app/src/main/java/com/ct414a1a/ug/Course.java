@@ -92,13 +92,20 @@ public class Course {
 
 	@Override
 	public String toString() {
-		return "{" +
-			" courseName='" + getCourseName() + "'" +
-			", modules='" + getModules() + "'" +
-			", students='" + getStudents() + "'" +
-			", startDate='" + getStartDate() + "'" +
-			", endDate='" + getEndDate() + "'" +
-			"}";
+		String output = "";
+		output +="{" +
+		" Course Name ='" + getCourseName() + "'" +
+		"\nModules = {";
+		for(Module module : this.getModules()){
+			output +="\n	" + module;
+		}
+		output += "}" +
+		", students='" + getStudents() + "'" +
+		", startDate='" + getStartDate() + "'" +
+		", endDate='" + getEndDate() + "'" +
+		"}";
+
+		return output;
 	}
 
 }

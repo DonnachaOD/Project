@@ -98,13 +98,20 @@ public class Module {
 
 	@Override
 	public String toString() {
-		return "{" +
-			" moduleName='" + getModuleName() + "'" +
-			", id='" + getId() + "'" +
-			", lecturer='" + getLecturer() + "'" +
-			", students='" + getStudents() + "'" +
-			", courses='" + getCourses() + "'" +
-			"}";
+		String output =  "{" +
+			"\n		ModuleName 	= '" + getModuleName() + "'" +
+			"\n		ID 			= '" + getId() + "'" +
+			"\n 	Lecturer	= '" + getLecturer() + "'" +
+			"\n     Students	= {";
+			int i = 1;
+			for(Student student : this.getStudents()){
+				output += "\n        Student #" + i + " : " + student;
+				i++;
+			}
+			output += "\n		}";
+			;
+
+			return output;
 	}
 
 }

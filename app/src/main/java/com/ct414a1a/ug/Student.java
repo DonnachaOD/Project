@@ -121,22 +121,13 @@ public class Student {
 
 	@Override
 	public String toString(){
-		int i = 1;
 		String output = "";
-		output += "Name: 			" + name;
-		output += "\nAge: 			" + age;
-		output += "\nDate of Birth: " + dateOfBirth;
-		output += "\nUsername:		" + username;
-		output += "\nID:			" + id;
-		output += "\nCourses:		\n---" + courses;
-		for(Course course : courses){
-			output += "\n	Course #" + i + ":		" + course.getCourseName();
-			output += "\n		Modules:";
-				for(Module module : course.getModules()){
-					output += "\n			" + module.getModuleName();
-				}
-			i++;
-		}
+		output += 
+		"               Name: 		 " + name +
+		"\n               Age: 			 " + age +
+		"\n				  Date of Birth: " + dateOfBirth +
+		"\n				  Username:		 " + username +
+		"\n				  ID:			 " + id;
 		return output;
 	}
 			
