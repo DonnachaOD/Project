@@ -164,12 +164,10 @@ public class Lecturer {
 	@Override
 	public String toString() {
 		return "{" +
-			" name='" + getName() + "'" +
-			", age='" + getAge() + "'" +
-			", dateOfBirth='" + getDateOfBirth() + "'" +
-			", id='" + getId() + "'" +
-			", username='" + getUsername() + "'" +
-			", modulesTaught='" + getModulesTaught() + "'" +
-			"}";
+			"\n		Name ='" + getName() + "'" +
+			"\n		Age ='" + getAge() + "'" +
+			"\n		Date Of Birth ='" + getDateOfBirth()+ "'" +
+			"\n		ID ='" + getId() + "'" +
+			"\n		Username ='" + getUsername() + "'";
 	}
 }

@@ -199,11 +199,11 @@ public class Student {
 	public String toString(){
 		String output = "";
 		output += 
-		"               Name: 		 " + name +
-		"\n               Age: 			 " + age +
-		"\n				  Date of Birth: " + dateOfBirth +
-		"\n				  Username:		 " + username +
-		"\n				  ID:			 " + id;
+		"\n		Name = " + name +
+		"\n		Age  = " + age +
+		"\n		Date of Birth = " + dateOfBirth +
+		"\n		Username = " + username +
+		"\n		ID = " + id;
 		return output;
 	}
 			

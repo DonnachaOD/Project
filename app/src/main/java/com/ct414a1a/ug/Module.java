@@ -1,7 +1,6 @@
 package com.ct414a1a.ug;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author Donnacha O'Dwyer		2022
@@ -15,8 +14,8 @@ public class Module {
 	public String moduleName;	//Name of Module
 	public String id;			//Module ID
 	public Lecturer lecturer;	//Lecturer who teaches module
-	public List<Student> students = new ArrayList<Student>();	//List of students who take this module
-	public List<Course> courses = new ArrayList<Course>();		//List of courses that include this module
+	public ArrayList<Student> students = new ArrayList<Student>();	//List of students who take this module
+	public ArrayList<Course> courses = new ArrayList<Course>();		//List of courses that include this module
 	
 	//Constructor
 	public Module(String moduleName, String id, Lecturer lecturer) {
@@ -109,7 +108,7 @@ public class Module {
 	 * Get list of Students
 	 * @return List<Student>
 	 */
-	public List<Student> getStudents() {
+	public ArrayList<Student> getStudents() {
 		return this.students;
 	}
 	
@@ -117,7 +116,7 @@ public class Module {
 	 * Set List of Students
 	 * @param students
 	 */
-	public void setStudents(List<Student> students) {
+	public void setStudents(ArrayList<Student> students) {
 		this.students = students;
 	}
 	
@@ -125,7 +124,7 @@ public class Module {
 	 * Get list of Courses
 	 * @return List<Course>
 	 */
-	public List<Course> getCourses() {
+	public ArrayList<Course> getCourses() {
 		return this.courses;
 	}
 	
@@ -133,7 +132,7 @@ public class Module {
 	 * Set List of Courses
 	 * @param courses
 	 */
-	public void setCourses(List<Course> courses) {
+	public void setCourses(ArrayList<Course> courses) {
 		this.courses = courses;
 	}
 	
@@ -143,14 +142,14 @@ public class Module {
 	 */
 	@Override
 	public String toString() {
-		String output =  "{" +
-			"\n		ModuleName 	= '" + getModuleName() + "'" +
-			"\n		ID 			= '" + getId() + "'" +
-			"\n 	Lecturer	= '" + getLecturer() + "'" +
-			"\n     Students	= {";
+		String output = 
+			"	ModuleName = '" + getModuleName() + "'" +
+			"\n	ID = '" + getId() + "'" +
+			"\n	Lecturer = " + getLecturer() + "\n		}" +
+			"\n	Students = {";
 			int i = 1;
 			for(Student student : this.getStudents()){
-				output += "\n        Student #" + i + " : " + student;
+				output += "\n            Student #" + i + " : " + student;
 				i++;
 			}
 			output += "\n		}";

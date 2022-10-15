@@ -140,18 +140,17 @@ public class Course {
 	 */
 	@Override
 	public String toString() {
-		String output = "";
-		output +="{" +
-		" Course Name ='" + getCourseName() + "'" +
-		"\nModules = {";
+		String output =
+		"Course Name ='" + getCourseName() + "'" +
+		"\n  Modules = {";
+		int i = 1;
 		for(Module module : this.getModules()){
-			output +="\n	" + module;
+			output += "\n    Module #" + i + " :\n" + module;
+			i++;
 		}
-		output += "}" +
-		", students='" + getStudents() + "'" +
-		", startDate='" + getStartDate() + "'" +
-		", endDate='" + getEndDate() + "'" +
-		"}";
+		output += "\n	}" +
+		"\n  Start Date = '" + getStartDate() + "'" +
+		"\n  End Date = '" + getEndDate() + "'";
 		return output;
 	}
 }
