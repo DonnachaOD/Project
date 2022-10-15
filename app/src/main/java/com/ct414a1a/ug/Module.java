@@ -25,77 +25,122 @@ public class Module {
 		this.lecturer = lecturer;
 	}
 	
-	//Add student to list of students
+	/**
+	 * Add student to list of students
+	 * @param student
+	 */
 	public void addStudent(Student student) {
 		students.add(student);
 	}
-	
-	//Overloaded Method add list of students to list of students
+
+	/**
+	 * Overloaded Method add list of students to list of students
+	 * @param students
+	 */
 	public void addStudent(ArrayList<Student> students) {
 		students.addAll(students);
 	}
-	
-	//Add Course to list of Courses
+		
+	/** 
+	 * Add Course to list of Courses
+	 * @param course
+	 */
 	public void addCourse(Course course) {
 		courses.add(course);
 	}
 	
-	//Overloaded Method add Course to list of Courses
+	/** 
+	 * Overloaded Method add Course to list of Courses
+	 * @param courses
+	 */
 	public void addCourse(ArrayList<Course> courses) {
 		courses.addAll(courses);
 	}
 
+	/** 
+	 * Get Module Name
+	 * @return String
+	 */
 	public String getModuleName() {
 		return this.moduleName;
 	}
-
-
-	public Module() {
-	}
-
-	public Module(String moduleName, String id, Lecturer lecturer, List<Student> students, List<Course> courses) {
-		this.moduleName = moduleName;
-		this.id = id;
-		this.lecturer = lecturer;
-		this.students = students;
-		this.courses = courses;
-	}
+	
+	/** 
+	 * Set Module Name
+	 * @param moduleName
+	 */
 	public void setModuleName(String moduleName) {
 		this.moduleName = moduleName;
 	}
-
+	
+	/** 
+	 * Get Module ID
+	 * @return String
+	 */
 	public String getId() {
 		return this.id;
 	}
-
+	
+	/** 
+	 * Set Module ID
+	 * @param id
+	 */
 	public void setId(String id) {
 		this.id = id;
 	}
-
+	
+	/** 
+	 * Get Lecturer
+	 * @return Lecturer
+	 */
 	public Lecturer getLecturer() {
 		return this.lecturer;
 	}
-
+	
+	/** 
+	 * Set Lecturer
+	 * @param lecturer
+	 */
 	public void setLecturer(Lecturer lecturer) {
 		this.lecturer = lecturer;
 	}
 
+	/** 
+	 * Get list of Students
+	 * @return List<Student>
+	 */
 	public List<Student> getStudents() {
 		return this.students;
 	}
-
+	
+	/** 
+	 * Set List of Students
+	 * @param students
+	 */
 	public void setStudents(List<Student> students) {
 		this.students = students;
 	}
-
+	
+	/** 
+	 * Get list of Courses
+	 * @return List<Course>
+	 */
 	public List<Course> getCourses() {
 		return this.courses;
 	}
-
+	
+	/** 
+	 * Set List of Courses
+	 * @param courses
+	 */
 	public void setCourses(List<Course> courses) {
 		this.courses = courses;
 	}
-
+	
+	/** 
+	 * Return String version of Module
+	 * @return String
+	 */
 	@Override
 	public String toString() {
 		String output =  "{" +
@@ -109,9 +154,6 @@ public class Module {
 				i++;
 			}
 			output += "\n		}";
-			;
-
 			return output;
 	}
-
 }
